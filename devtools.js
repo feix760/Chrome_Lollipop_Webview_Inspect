@@ -6,7 +6,7 @@ chrome.tabs.get(tabId, data => {
   // devtools://devtools/remote/serve_rev/@200258/inspector.html?remoteVersion=44.0.2403.147&remoteFrontend=true&dockSide=undocked
   const regexp = /^devtools:\/\/devtools\/remote\/.*?remoteVersion=(\d+)/i;
   const remoteVersion = regexp.test(url) && RegExp.$1 || '';
-  if (remoteVersion && +remoteVersion === 44) {
+  if (remoteVersion && +remoteVersion < 46) {
     chrome.devtools.inspectedWindow.eval(getJS(remoteVersion), (result, isException) => {
       console.log('isException', isException);
     });
