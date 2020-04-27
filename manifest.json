@@ -1,18 +1,13 @@
 {
-    "name": "chrome_inspect_android5",
+    "name": "chrome_lollipop_webview_inspect",
     "version": "1.0",
     "manifest_version": 2,
-    "description": "chrome inspect android 5",
+    "description": "Chrome extension for fix android 5 webview inspect page style bug",
     "devtools_page": "devtools.html",
     "browser_action": {"default_icon": "icon32.png"},
     "icons": {"48": "icon48.png"},
     "permissions": [
-        "tabs",
-        "activeTab",
-        "debugger",
         "http://*/*",
-        "https://*/*",
-        "webRequest",
-        "webRequestBlocking"
+        "https://*/*"
     ]
 }
